@@ -1,3 +1,4 @@
+package Trucks_CrudTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,7 +27,23 @@ public class LoginPageTest {
 
 		//Clicking login button
 		driver.findElement(By.xpath("//*[@id='root']/div[1]/div[1]/div[2]/form/div[5]/button")).submit();
-
+		
+		Truck_CrudTest test = new Truck_CrudTest();
+		
+		test.waitFunc(3);
+		
+		test.AddingTruck(driver);
+		
+		test.waitFunc(3);
+		
+		test.UpdateTruck(driver);
+		
+		test.waitFunc(3);
+		
+		test.DeletingTruck(driver);
+		
+		test.waitFunc(3);
+		
+		test.searchTruck(driver);
 	}
-
 }
